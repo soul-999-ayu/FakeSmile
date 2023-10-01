@@ -1,0 +1,485 @@
+label male:
+    play music "audio/music 1.opus"
+    image pic = im.Scale("images/Backgrounds/selection.jpg", 1920, 1580)
+    scene pic with fade
+    show main smile at center:
+        zoom 0.9
+    $main = renpy.input("Enter Main Character's Name:", default="Ayu", length=20)
+    scene pic with fade
+    show f conf at center:
+        zoom 0.45
+    $bff1 = renpy.input("Enter Your Best Friend's Name:", default="Sahil", length=20)
+    show f aha at center:
+        zoom 0.45
+    $bff2 = renpy.input("Enter Your 2nd Best Friend's Name:", default="Hritik", length=20)
+    define main = Character("[main]")
+    define bff1 = Character("[bff1]")
+    define bff2 = Character("[bff2]")
+    define pal = Character("Pallavi")
+    define san = Character("Saanvi")
+    define mom = Character("Mom")
+    define anshika = Character("Anshika")
+    scene dark
+    "Thanks for entering the names."
+    "The story begins now..."
+    ""
+    image pic2 = im.Scale("images/Backgrounds/backyard night.jpg", 1920, 1580)
+    scene pic2 with fade
+    "You, [bff1] and [bff2] were best friends since your childhood."
+    "You three were together till high school."
+    "And now you three are in different colleges..."
+    "but shares all your thoughts and moments with each other."
+    ""
+    play music "audio/ring.opus"
+    "**You received a notification**"
+    image pic3 = im.Scale("images/WhatsApp/pic 1.jpg", 1920, 1080)
+    scene pic3 with fade
+    play music "audio/music 2.opus"
+    "[bff1] sent a video."
+    menu:
+        "React 'Lol' without playing.":
+            pass
+        "Play video and then react.":
+            stop music
+            window hide dissolve
+            play movie "images/WhatsApp/vid 1.ogv"
+            $ renpy.pause(8.0, hard=True)
+    play music "audio/music 2.opus"
+    image pic4 = im.Scale("images/WhatsApp/pic 2.jpg", 1920, 1080)
+    scene pic4 with fade
+    "You reacted with 'Lol'"
+    image pic5 = im.Scale("images/WhatsApp/pic 3.jpg", 1920, 1080)
+    scene pic5 with fade
+    bff2 "Ramadan Mubarak."
+    "You kept chatting for few minutes about the same video."
+    image pic6 = im.Scale("images/WhatsApp/pic 4.jpg", 1920, 1080)
+    scene pic6 with fade
+    "[bff2] randomly started chatting about her girl."
+    bff2 "Do you know what my girl said to me today?"
+    bff1 "What did she say?"
+    bff2 "She said that I'm the most adorable person in the world."
+    bff1 "I remember my girl Divya also said something like this once."
+    bff2 "That's nice."
+    image pic7 = im.Scale("images/WhatsApp/pic 5.jpg", 1920, 1080)
+    scene pic7 with fade
+    bff2 "My girl's name is Sarika btw."
+    bff1 "That is some rare name."
+    bff1 "Why [main] is silent??"
+    bff2 "Idk man, @[main]"
+    bff1 "What is your girl's name?"
+    menu:
+        "Reply: I don't have a girl":
+            main "I don't have a girl and I'm not interested."
+            bff2 "Man, you surely are a fool."
+            bff2 "Get a woman for yourself!"
+            bff2 "You'll surely feel good then."
+            main "And why is that?"
+            bff1 "Their aura is full of love and care."
+            main "Umm, I do agree."
+            main "I have a crush tho and I'll make her mine soon."
+        "Reply: I've a crush and I'll make her my girl soon":
+            main "I have a crush and..."
+            main "Her name is Anshika and I'll make her mine."
+            bff1 "Ooooooooooooooo"
+            bff2 "That's so nice."
+    bff1 "Women are a drag to handly tho."
+    bff2 "You're probably right."
+    bff2 "My girl becomes so annoying when she starts talking about her male best friend."
+    bff1 "Same with mine."
+    bff1 "Hope [main]'s will be different, lol."
+    menu:
+        "Mine is already awesome.":
+            main "Mine is different."
+            bff1 "That's great, you don't have to suffer like us."
+            bff2 "Yeah, I agree."
+        "Mine's the same.":
+            main "Mine is the same."
+            main "Should I drop the plan to make her mine?"
+            bff1 "You should, I guess."
+            bff2 "Yeah, drop her, haha"
+    image pic8 = im.Scale("images/WhatsApp/pic 6.jpg", 1920, 1080)
+    scene pic8 with fade
+    play music "audio/ring.opus"
+    "[bff1] sent a photo"
+    window hide dissolve
+    scene dark
+    show fullpic with fade
+    pause 10.0
+    play music "audio/music 3.opus"
+    image pic9 = im.Scale("images/WhatsApp/pic 7.jpg", 1920, 1080)
+    scene pic9 with fade
+    main "something like this has already happened to me."
+    main "Remember @[bff1]"
+    main "Pallavi, who traumatized me for 3 whole days."
+    bff1 "Yeah, I do remember."
+    image pic69 = im.Scale("images/WhatsApp/pic 8.jpg", 1920, 1080)
+    scene pic69 with fade
+    main "I stopped socializing with women after that day."
+    bff1 "Get a hold of yourself."
+    bff2 "Just forget it."
+    main "I'm trying to."
+    bff2 "Women are mostly like that."
+    bff1 "Yup."
+    bff2 "Some girls ignore boys and some destroy them."
+    bff1 "That's the beauty of them."
+    bff2 "Beauty?, Lol."
+    bff2 "Should we meet tomorrow? At Rock Garden?"
+    main "Sure! I'm always ready to enjoy with my bffs."
+    bff1 "I'll think bout it."
+    bff1 "Goodnight everyone."
+    bff2 "Goodnight."
+    main "Have sweet dreams."
+
+    # After chatting:
+    play music "audio/music 4.opus"
+    "It's getting late and you're feeling tired."
+    image pic10 = im.Scale("images/Backgrounds/bedroom night.png", 1920, 1580)
+    scene pic10 with fade
+    "So you said your Goodbye and went to your room."
+    image pic11 = im.Scale("images/Backgrounds/ceiling.jpg", 1920, 1580)
+    scene pic11 with fade
+    "You lay on your bed."
+    "After all those chats about girls and their behaviours."
+    "Your mind start recalling a girl from your past."
+    image pic12 = im.Scale("images/Backgrounds/dissolve bg.png", 1920, 1580)
+    scene pic12 with fade
+    scene dark with fade
+    "A girl who made you think that all girls are bad."
+    "A girl who traumatized you for three whole days."
+    "A girl who made you social anxious."
+    play music "audio/music 5.opus"
+    scene pic12 with fade
+    image pic13 = im.Scale("images/Backgrounds/roof.jpeg", 1920, 1580)
+    scene pic13 with fade
+    show pallavi smile 2 at center:
+        zoom 0.6
+    pal "Hey [main], thanks for coming with me to the roof."
+    show pallavi happy 1 at center:
+        zoom 0.6
+    pal "I, I wanted to say this thing from a long time."
+    main "What do you want to say?"
+    show pallavi happy 2 at center:
+        zoom 0.6
+    pal "I love you."
+    menu:
+        "Refuse it as you wanna keep your friendship":
+            main "Whatttttt????????"
+            show pallavi sad at center:
+                zoom 0.6
+            main "I always though that we are good friends."
+            main "You completely ruined our friendship."
+            main "Just say that this was a joke."
+            show pallavi angry 2 at center:
+                zoom 0.6
+            pal "No it wasn't!!!"
+            scene pic13 with fade
+            "She ran downstairs but you can still hear her saying..."
+            "**ALL BOYS ARE SAME!!!!!!!!**"
+            ""
+            "You stood there for few minutes thinking what just happened."
+            "You were completely shocked by her actions and were feeling bad for her as well."
+            ""
+            "**After 15 Minutes**"
+            scene pic13 with fade
+            show pallavi sad 2 at right:
+                zoom 0.6
+            show saanvi curious at left:
+                zoom 0.35
+            "She came back to the roof with her friend."
+            san "She ran to me and started crying."
+            san "What did you say to her?"
+            main "I said nothing."
+            show saanvi angry at left:
+                zoom 0.35
+            san "O, then why was she crying?"
+            main "Ask this to her, she's your best friend, isn't she?."
+            show saanvi worried at left:
+                zoom 0.35
+            san "I'm leaving, sort out this matter and dont't make her cry again."
+            scene pic13 with fade
+            show pallavi sad 2 at right:
+                zoom 0.6
+            main "Welll, sorry Pallavi."
+            main "I shouldn't be rude."
+            main "I like you too."
+        "Accept her love":
+            main "I like you too."
+            show pallavi surprised at center:
+                zoom 0.6
+            pal "I did not expect this."
+    show pallavi happy 2 at center:
+        zoom 0.6
+    pal "Thanks for accepting my love."
+    scene pic13 with fade
+    show pallavi happy at center:
+        zoom 0.6
+    pal "I wanna give you a precious gift."
+    main "What is it?"
+    "All of a sudden..."
+    scene dark
+    "She flases her boobs."
+    "Perfectly shaped."
+    "Perfectly sized."
+    "Perfectly taned."
+    ""
+    "You pull her shirt down"
+    scene pic13
+    show pallavi surprised 2 at center:
+        zoom 0.6
+    pal "Didn't you like them?"
+    main "Are you mad or something?"
+    show pallavi sad at center:
+        zoom 0.6
+    pal "What happened?"
+    main "Why did you show them?"
+    main "I just said I like you and you flashed your boobs?"
+    show pallavi angry 2 at center:
+        zoom 0.6
+    pal "I was right!! All boys are same!"
+    pal "No one respects our dignity."
+    scene pic13 with fade
+    "She ran downstairs and you can still hear her saying..."
+    "**I HATE BOYS!!!!!!**"
+    main "Man, what a strange night."
+    main "And what did she mean by 'All Boys are same?'"
+    main "Did she do the same thing with other boys too?"
+    play music "audio/music 4.opus"
+    scene pic11 with fade
+    "You opened your eyes in your room."
+    main "My past was surely traumatizing."
+    main "I reduced female interactions cause of her."
+    main "I wonder what she's doing these days."
+    main "Anyway, let's sleep, it's getting late."
+    ""
+    scene pic12 with fade
+    scene dark
+    "You closed your eyes and felt asleep"
+    ""
+    scene pic12 with fade
+    image pic14 = im.Scale("images/Extra/waking.jpeg", 1920, 1580)
+    scene pic14 with fade
+    main "It's 8:17 already?"
+    main "I wanna sleep more, but I can't I guess."
+    scene dark with fade
+    play music "audio/music 6.opus"
+    show ready at center
+    "You get ready to go to park."
+    main "This shirt is my favourite."
+    image pic15 = im.Scale("images/Backgrounds/road.jpg", 1920, 1080)
+    scene pic15 with fade
+    "You started moving towards the park with a smile."
+    main "Today's weather is awesome."
+    main "I'm feeling like something good is bout to happen."
+    image pic16 = im.Scale("images/Backgrounds/park road.jpg", 1920, 1080)
+    scene pic16 with fade
+    "**At the park**"
+    main "Where's [bff1] and [bff2], can't wait to see them."
+    scene dark
+    image pic17 = im.Scale("images/Extra/park 1.jpg", 1720, 1080)
+    show pic17 with fade
+    main "[bff2] is enjoying with his girl."
+    "Should I meet my friend?:"
+    menu:
+        "No, I shouldn't disturb them.":
+            main "I think I shouldn't disturb them."
+            scene pic15 with fade
+            main "I wish I could've spent some time with my friends, but..."
+            main "mmmm"
+            ""
+            show f smirk at center with fade:
+                zoom 0.45
+            "[bff1] appears randomly out of nowhere."
+            bff1 "Hey, didn't we decide to meet in the park?"
+            main "Yes, we did, but..."
+            show f shut at center:
+                zoom 0.45
+            bff1 "But what?"
+            main "I went to park and saw that [bff2] is enjoying with his girl."
+            show f norm at center:
+                zoom 0.45
+            bff1 "Is that the issue?"
+            show f conf 1 at center:
+                zoom 0.45
+            bff1 "You surely are fool."
+            bff1 "You should've joined them!"
+        "Yes, he's my childhood friend, I should.":
+            "You decided to meet him."
+            "As soon as you started moving..."
+            "A hand pulled you back."
+            scene pic16 with fade
+            show f ohman at center:
+                zoom 0.45
+            bff1 "What were you doing?"
+            main "I was joining them."
+            show f mad at center:
+                zoom 0.45
+            bff1 "Are you mad or something?"
+            main "Why?"
+            show f smirk at center:
+                zoom 0.45
+            bff1 "You don't have girlfriend and..."
+            bff1 "You were trying to ruin their relationship!"
+            main "It's  nothing like that!"
+            show f conf at center:
+                zoom 0.45
+            bff1 "I'm pretty sure its that."
+    show f conf 2 at center:
+        zoom 0.45
+    bff1 "Anyway, lemme go."
+    bff1 "I'm going to my girl's house."
+    scene pic15 with fade
+    "And he leaves without even saying goodbye."
+    main "He's grown arrogent I think."
+    main "He never talked to me like that."
+    main "Anyway, why should I waste a beautiful day like this."
+    "What should I do?"
+    menu:
+        "Go to another park.":
+            main "I'm going to another park."
+            image pic18 = im.Scale("images/Backgrounds/park 2.jpg", 1920, 1080)
+            scene pic18 with fade
+            main "This park looks good."
+            image pic19 = im.Scale("images/Backgrounds/park 3.jpg", 1920, 1080)
+            scene pic19 with fade
+            "You sat on the bench."
+            main "The weather is really awesome."
+            main "I wish I would've someone too."
+            main "Someone..."
+            main "Someone special."
+            scene dark with fade
+            "You closed your eyes for a sec."
+        "Go back to home.":
+            image pic100 = im.Scale("images/Backgrounds/bedroom day.png", 1920, 1080)
+            scene pic100 with fade
+            main "I wish I had spent time with them."
+            main "and they don't have girlfriends."
+            main "Girls make men foget about their family and friends."
+            main "Anyway..."
+            main "Let's relax a bit."
+            scene dark with fade
+            main "Are all girls same?"
+            main "Is Anshika the same?"
+    call mainlabel
+    play music "audio/music 8.opus"
+    scene pic11 with fade
+    main "Wooooo, that was a dream!"
+    main "Was that?"
+    main "I didn't go to park then?"
+    main "Reality hits even in dreams."
+    main "It opened my eyes toward girls and their smile."
+    scene pic100 with fade
+    main "A smile that hides all the pain and sufferings."
+    main "I've to change myself."
+    main "I, I will change other too!"
+    main ""
+    scene quote with fade
+    pause 5.0
+    window hide dissolve
+    play movie "images/Outro/credits.ogv"
+    $ renpy.pause(24.0, hard=True)
+    return
+
+    label mainlabel:
+        scene pic12 with fade
+        window hide dissolve
+        play movie "images/Extra/converted.ogv"
+        image pic20 = im.Scale("images/Backgrounds/mitsuha room.jpg", 1920, 1080)
+        scene pic20 with fade
+        play music "audio/music 7.opus"
+        main "What??"
+        main "How did I turn into my crush??"
+        main "This is her room and..."
+        main "Is this a dream?"
+        mom "(from downstairs) Anshika, come here and clean the room."
+        main "Anshika??"
+        main "Well, I guess I have to accept it as long as I do not get normal."
+        "You started acting and sounding like Anshika."
+        anshika "Yes, I'm coming."
+        image pic21 = im.Scale("images/Extra/dirty.jpg", 1920, 1080)
+        scene pic21 with fade
+        anshika "Well, this seems to have a lot of work."
+        anshika "Why the hell I turned into Anshika."
+        image pic22 = im.Scale("images/Extra/cleaned.jpg", 1920, 1080)
+        scene pic22 with fade
+        anshika "Finally cleaned the room."
+        scene pic20 with fade
+        anshika "Ohhhh, Finally I can relax."
+        anshika "What is this feeling?"
+        show hand:
+            zoom 3.2
+            xpos 0.2
+            ypos 0.1
+        anshika "Am I bleeding from my bottom half?"
+        anshika "Where is this blood coming from?"
+        scene pic12 with fade
+        scene dark
+        "You pass out."
+        scene pic12 with fade
+        image pic23 = im.Scale("images/Backgrounds/mom room.png", 1920, 1080)
+        scene pic23 with fade
+        show mom shock:
+            zoom 0.6
+            xalign 0.5
+            yalign 0.5
+        mom "Are you okay my daughter?"
+        mom "You really got me scared there."
+        anshika "I'm feeling good now."
+        show mom happy
+        mom "Well that's a relief."
+        mom "You'll be fine soon."
+        show mom angry
+        mom "But did you forget that you're on your periods?"
+        main "(It's not like I remeber it at the first place.)"
+        anshika "No, It's just cause of the work I'm doing lately."
+        show mom neutral
+        mom "You'll be fine soon."
+        show mom happy
+        mom "Go back to your room and relax."
+        scene pic20
+        anshika "That pain was unbearable for real."
+        anshika "I hope that pain won't bother me again."
+        play music "audio/ring.opus"
+        "You received a notification."
+        image pic27 = im.Scale("images/Extra/whatsapp.jpg", 1920, 1080)
+        scene pic27 with fade
+        play music "audio/music 7.opus"
+        anshika "A test? Tomorrow?"
+        anshika "Of which subject?"
+        image pic28 = im.Scale("images/Extra/wa blur.jpg", 1920, 1080)
+        scene pic28 with fade
+        main "Yeah I remember. Sir said that there will be a test on Monday."
+        main "I've to study too."
+        main "Wait, how can I?"
+        main "I'll study later..."
+        main "Lemme check Insta."
+        image pic26 = im.Scale("images/Extra/icons.jpg", 1920, 1080)
+        scene pic26 with fade
+        ""
+        image pic24 = im.Scale("images/Extra/insta.jpg", 1920, 1080)
+        scene pic24 with fade
+        main "Who's this guy?"
+        main "And why did he call me?"
+        main "I mean, why did he call Anshika?"
+        image pic25 = im.Scale("images/Extra/insta blur.jpg", 1920, 1080)
+        scene pic25 with fade
+        main "People are such a crap these days."
+        main "I'm starting to realize that I was the same back then."
+        main "I used to message random girls before that incident."
+        main "Now I'm getting it."
+        main "God has sent her to show me my true self."
+        main "And that incident has surely changed me a lot."
+        main "I've wasted a lot of time I guess."
+        main "Lemme study for her."
+        image pic30 = im.Scale("images/Extra/mitsuha study.jpg", 1920, 1080)
+        scene pic30 with fade
+        main "Why is this subject so tough?"
+        main "I'm getting bored."
+        image pic31 = im.Scale("images/Extra/mitsuha bored.png", 1920, 1080)
+        scene pic31 with fade
+        main "I wanna take a quick nap."
+        scene pic12 with fade
+        scene dark with fade
+        "z..."
+        "zz..."
+        "zzz..."
+        return
